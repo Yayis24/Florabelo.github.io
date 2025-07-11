@@ -73,6 +73,7 @@ h1{
 }
 
 #catalogo{
+    font-size: 50px;
     color: #714329;
     box-shadow: 0 0 20px rgba(167, 91, 48, 0.836);
 }
