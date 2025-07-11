@@ -1,0 +1,60 @@
+/* Contenedor flotante */
+.whatsapp-btn-container {
+    position: fixed;
+    right: 30px;
+    bottom: -50px;
+    padding: 24px;
+    animation: fade-up 1000ms forwards;
+    animation-delay: 1000ms;
+    z-index: 9999;
+}
+
+/* Animación de entrada */
+@keyframes fade-up {
+    100% {
+        bottom: 24px;
+        opacity: 1;
+    }
+}
+
+/* Enlace del botón */
+.whatsapp-btn {
+    font-size: 48px;
+    color: #25d366;
+    display: inline-block;
+    transition: all 0.4s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+/* Zoom al pasar el cursor */
+.whatsapp-btn:hover {
+    transform: scale(1.2);
+}
+
+.whatsapp-btn span {
+    position: absolute;
+    bottom: 60px; /* Ahora se muestra encima del ícono */
+    left: 50%;
+    transform: translateX(-50%) rotateZ(10deg);
+    background-color: #e1f5ec;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #075e54;
+    opacity: 0;
+    transition: all 400ms ease;
+    white-space: nowrap;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+}
+
+/* Mostrar el mensaje al pasar el cursor */
+.whatsapp-btn:hover span {
+    transform: translateX(-50%) rotateZ(0deg);
+    opacity: 1;
+}
+
